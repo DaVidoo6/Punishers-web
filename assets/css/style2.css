@@ -1,0 +1,257 @@
+body {
+    max-width: 1205px;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+
+
+}
+
+button {
+    background-color: white;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    border-style: solid;
+}
+
+
+header {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+header p {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+header span {
+    background-color: black;
+    color: white;
+}
+
+.content-container {
+    display: flex;
+    margin-top: 50px;
+
+}
+
+article {
+    background-color: grey;
+    margin-bottom: 30px;
+}
+
+article img,
+.sidebar img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.sidebar {
+    width: 33.3333%;
+    height: 100%;
+}
+
+.main-content {
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+    height: 45%;
+}
+
+.sidebar-card {
+    background-color: #fff;
+    width: 100%;
+    margin: 20px;
+    height: 25%;
+}
+
+.sidebar-card h2 {
+    padding-left: 16px;
+}
+
+.text {
+    padding: 15px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+footer {
+
+    text-align: center;
+    font-size: 15px;
+}
+
+.navigacnyheader {
+    color: white;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    background-color: black;
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: #ADFF2F;
+    color: black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: black;
+    color: white;
+}
+
+
+form {
+    display: flow;
+    margin: auto;
+}
+
+section {
+    text-align: center;
+    font-size: 20px;
+
+}
+
+a:hover {
+    background-color: transparent;
+    color: #ADFF2F;
+    outline: 0;
+    text-transform: none
+}
+
+.loga {
+    text-align: center;
+}
+
+
+img {
+    transition: transform 1s ease-in-out;
+    height: auto;
+    overflow: hidden;
+}
+
+/* Nastavenie videa ako pozadia */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Iný obsah stránky */
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: #fff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+.dark-theme {
+  --text: #f0fbef;
+  --background: #000000;
+  --primary: #97e194;
+  --secondary: #091c08;
+  --accent: #3ebc34;
+}
+
+.light-theme {
+  --text: #000000;
+  --background: #f0fbef;
+  --primary: #97e194;
+  --secondary: #cef0cc;
+  --accent: #164413;
+}
+body {
+  font-family: "Inter", sans-serif;
+  margin-inline: auto;
+  padding: 2rem;
+  background-color: var(--background);
+  color: var(--text);
+}
+/**********/
+/* HEADER */
+/**********/
+.header {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary);
+  padding-inline: 1rem;
+  margin-bottom: 2.5rem;
+}
+.logo-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.logo {
+  max-width: 3.125rem;
+}
+.logo-text {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.navigation {
+}
+.navigation-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+.navigation-link {
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+}
+.navigation-item:hover {
+  background-color: var(--primary);
+  transition: background 0.3s;
+}
+/****************/
+/* MAIN CONTENT */
+/****************/
+.content-container {
+  display: flex;
+  gap: 2.5rem;
+}
+.main-content {
+  max-width: 55rem;
+  display: grid;
+  gap: 2rem;
+}
+.text {
+  background-color: var(--secondary);
+  padding: 1rem;
+  color: var(--secondary);
+}
+.text h2 {
+  margin-bottom: 1rem;
+}
+.bg-primary {
+  background-color: var(--primary);
+}
+.shadow {
+  box-shadow: 0 25px 50px -12px rgba(164, 245, 73, 0.1);
+}
+.sidebar {
+  background-color: var(--secondary);
+  max-width: 35rem;
+}
+.sidebar-card {
+  width: 100%;
+}
+.text-sidebar {
+  padding: 1rem;
+}
+
+/****************/
+/* FOOTER */
+/****************/
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: var(--secondary);
+  color: var(--text);
+}
+.footer-link {
+  color: var(--text);
+}
+.footer-link:hover {
+  color: var(--accent);
+}
+
+/****************/
+/* Utility */
+/****************/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(287px, 1fr));
+  gap: 1rem;
+}
+.card img {
+  max-height: 286px;
+  width: 100%;
+}
