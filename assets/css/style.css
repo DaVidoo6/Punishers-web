@@ -19,6 +19,7 @@ body {
   padding: 2rem;
   background-color: var(--background);
   color: var(--text);
+  max-width: 80rem;
 }
 /**********/
 /* HEADER */
@@ -93,9 +94,39 @@ body {
 .bg-primary {
   background-color: var(--primary);
 }
+
 .shadow {
   box-shadow: 0 25px 50px -12px rgba(164, 245, 73, 0.1);
 }
+
+/****************/
+/* Side bar */
+/****************/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: var(--primary);
+  color: black;
+}
+
+th,
+td {
+  border-right: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  text-transform: uppercase;
+}
+tr {
+  padding: 0.5rem;
+}
+
 .sidebar {
   background-color: var(--secondary);
   max-width: 35rem;
@@ -114,26 +145,30 @@ button {
   color: var(--text);
   background-color: var(--secondary);
 }
+th,
+td {
+  padding-right: 0.625rem;
+}
 
 /****************/
-/* Move-Mouse-on-img */
+/* Move Mouse on img */
 /****************/
-.pohybmysou,
-.pohybmysou2 {
+.move-mouse,
+.move-mouse2 {
   position: relative;
   display: inline-block;
 }
 
 .hidden-img {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 0;
+  right: 0;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.pohybmysou:hover .hidden-img,
-.pohybmysou2:hover .hidden-img {
+.move-mouse:hover .hidden-img,
+.move-mouse2:hover .hidden-img {
   opacity: 1;
 }
 
@@ -194,5 +229,9 @@ footer {
 }
 .card img {
   max-height: 286px;
+  width: 100%;
+}
+.card-xl img {
+  max-height: 45.5rem;
   width: 100%;
 }
