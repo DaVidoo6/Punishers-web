@@ -77,7 +77,6 @@ body {
   gap: 2rem;
 }
 .text {
-  background-color: var(--secondary);
   padding: 1rem;
   color: var(--secondary);
 }
@@ -125,6 +124,9 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(287px, 1fr));
   gap: 1rem;
+}
+.card {
+  background-color: var(--primary);
 }
 .card img {
   max-height: 286px;
