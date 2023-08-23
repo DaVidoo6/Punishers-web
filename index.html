@@ -168,7 +168,7 @@
                       src="assets/images/davido.jpg"
                       alt="Obrázok"
                       class="hidden-img"
-                    />
+                    />Foto
                   </td>
                 </tr>
                 <tr>
@@ -470,6 +470,18 @@
       </aside>
       <!-- SIDEBAR END -->
     </div>
+    <!-- POP-UP -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <img
+          src="assets/images/punisherpopup.jpg"
+          height="40%"
+          width="60%"
+        /><br />
+        <button id="close-btn">Zavrieť</button>
+      </div>
+    </div>
+
     <footer>
       <p>
         Copyright © 2023
@@ -478,4 +490,36 @@
       </p>
     </footer>
   </body>
+  <script>
+    let zobrazitRaz = true;
+
+    window.addEventListener("scroll", function () {
+      var popup = document.getElementById("popup");
+      var distanceFromTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (distanceFromTop > 500 && zobrazitRaz) {
+        // Ak je vzdialenosť od vrchu stránky väčšia ako 500
+        popup.style.opacity = "1"; // Nastavíme opacity na 1 (postupné zviditeľnenie)
+        popup.style.visibility = "visible"; // Nastavíme visibility na "visible"
+      } else {
+        popup.style.opacity = "0"; // Inak nastavíme opacity na 0 (postupné zatemnenie)
+        popup.style.visibility = "hidden"; // Inak nastavíme visibility na "hidden"
+      }
+    });
+
+    var closeBtn = document.getElementById("close-btn"); // Vyhľadávanie elementu so zatváracím id "close"
+    closeBtn.addEventListener("click", function () {
+      // Pridanie poslucháča udalosti na kliknutie
+      var popup = document.getElementById("popup");
+      popup.style.opacity = "0"; //Nastavenie opacity na 0 (skrytie obrázka)
+      popup.style.display = "none"; // Nastavenie visibility na "hidden"
+      zobrazitRaz = false;
+    });
+    var popup = document.getElementById("popup");
+    setTimeout(function () {
+      popup.style.opacity = "0";
+      popup.style.visibility = "hidden";
+    }, 5000);
+  </script>
 </html>

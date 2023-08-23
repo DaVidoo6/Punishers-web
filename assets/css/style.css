@@ -1,3 +1,10 @@
+.light-theme {
+  --text: #000000;
+  --background: #f0fbef;
+  --primary: #97e194;
+  --secondary: #cef0cc;
+  --accent: #164413;
+}
 .dark-theme {
   --text: #f0fbef;
   --background: #000000;
@@ -6,13 +13,6 @@
   --accent: #3ebc34;
 }
 
-.light-theme {
-  --text: #000000;
-  --background: #f0fbef;
-  --primary: #97e194;
-  --secondary: #cef0cc;
-  --accent: #164413;
-}
 body {
   font-family: "Inter", sans-serif;
   margin-inline: auto;
@@ -29,8 +29,13 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: var(--secondary);
-  padding-inline: 1rem;
   margin-bottom: 2.5rem;
+}
+.logo-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.1875rem;
 }
 .logo-container {
   display: flex;
@@ -38,7 +43,8 @@ body {
   align-items: center;
 }
 .logo {
-  max-width: 3.125rem;
+  width: 7.5rem;
+  height: 4.25rem;
 }
 .logo-text {
   font-size: 2rem;
@@ -55,7 +61,8 @@ body {
   flex-wrap: wrap;
 }
 .navigation-link {
-  padding: 1rem;
+  padding-inline: 1rem;
+  padding-block: 1.1875rem;
   display: block;
   text-decoration: none;
   color: var(--text);
@@ -99,6 +106,36 @@ body {
 .text-sidebar {
   padding: 1rem;
 }
+button {
+  padding-inline: 1rem;
+  padding-block: 1.1875rem;
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  background-color: var(--secondary);
+}
+
+/****************/
+/* Move-Mouse-on-img */
+/****************/
+.pohybmysou,
+.pohybmysou2 {
+  position: relative;
+  display: inline-block;
+}
+
+.hidden-img {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pohybmysou:hover .hidden-img,
+.pohybmysou2:hover .hidden-img {
+  opacity: 1;
+}
 
 /****************/
 /* FOOTER */
@@ -115,6 +152,33 @@ footer {
 }
 .footer-link:hover {
   color: var(--accent);
+}
+
+/****************/
+/* Pop-up */
+/****************/
+
+#popup {
+  opacity: 0; /* PĂ´vodne je obrĂˇzok neviditeÄľnĂ˝ */
+  visibility: hidden; /* PĂ´vodne je obrĂˇzok skrytĂ˝ */
+  transition: opacity 0.5s ease; /* PrechodovĂˇ animĂˇcia pre opacity */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#popup img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer; /* ZmenĂ­ kurzor na ukazovateÄľ pri prejdenĂ­ myĹˇou nad ikonu */
 }
 
 /****************/
